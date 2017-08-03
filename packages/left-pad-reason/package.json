@@ -5,6 +5,8 @@
   "scripts": {
     "clean": "bsb -clean-world",
     "build": "bsb -make-world",
+    "pretest": "yarn run build",
+    "test": "jest",
     "watch": "bsb -make-world -w"
   },
   "keywords": [
@@ -12,6 +14,12 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "bs-jest": "^0.1.0",
     "bs-platform": "^1.8.2"
+  },
+  "jest": {
+    "roots": [
+      "lib/js/src"
+    ]
   }
 }
