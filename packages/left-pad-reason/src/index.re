@@ -11,10 +11,20 @@ let cache = [|
   "         "
 |];
 
-let strFromCache str len => switch len {
-  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 => cache.(len) ^ str;
+let strFromCache str len =>
+  switch len {
+  | 0
+  | 1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9 => cache.(len) ^ str
   | _ => str
-};
+  };
 
 let leftPad str len character => {
   let nLen = ref (max (len - String.length str) 0);
