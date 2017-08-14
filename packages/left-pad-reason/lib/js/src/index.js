@@ -2,6 +2,7 @@
 'use strict';
 
 var Caml_array = require("bs-platform/lib/js/caml_array.js");
+var Pervasives = require("bs-platform/lib/js/pervasives.js");
 
 var cache = /* array */[
   "",
@@ -16,15 +17,23 @@ var cache = /* array */[
   "         "
 ];
 
+function strFromCache(str, len) {
+  if (len > 9 || len < 0) {
+    return str;
+  } else {
+    return Caml_array.caml_array_get(cache, len) + str;
+  }
+}
+
 function leftPad(str, len, character) {
-  var nLen = len - str.length | 0;
+  var nLen = Pervasives.max(len - str.length | 0, 0);
   var nChar = character.length ? character : " ";
   var match = nChar;
   var match$1 = +(nLen < 10);
   var exit = 0;
   if (match === " ") {
     if (match$1 !== 0) {
-      return Caml_array.caml_array_get(cache, nLen) + str;
+      return strFromCache(str, nLen);
     } else {
       exit = 1;
     }
@@ -58,6 +67,7 @@ function leftPad(str, len, character) {
   
 }
 
-exports.cache   = cache;
-exports.leftPad = leftPad;
+exports.cache        = cache;
+exports.strFromCache = strFromCache;
+exports.leftPad      = leftPad;
 /* No side effect */

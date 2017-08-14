@@ -4,67 +4,83 @@
 var Jest  = require("bs-jest/lib/js/src/jest.js");
 var Index = require("../index.js");
 
-describe("empty letter", (function () {
-        Jest.test("2", (function () {
-                return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 2, "")));
+describe("strFromCache", (function () {
+        Jest.test("0", (function () {
+                return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.strFromCache("foo", 0)));
               }));
-        Jest.test("3", (function () {
-                return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 3, "")));
+        Jest.test("1", (function () {
+                return Jest.Expect[/* toBe */1](" foo")(Jest.Expect[/* expect */0](Index.strFromCache("foo", 1)));
               }));
-        Jest.test("4", (function () {
-                return Jest.Expect[/* toBe */1](" foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 4, "")));
+        Jest.test("9", (function () {
+                return Jest.Expect[/* toBe */1]("         foo")(Jest.Expect[/* expect */0](Index.strFromCache("foo", 9)));
               }));
-        Jest.test("5", (function () {
-                return Jest.Expect[/* toBe */1]("  foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 5, "")));
-              }));
-        Jest.test("6", (function () {
-                return Jest.Expect[/* toBe */1]("         foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 12, "")));
-              }));
-        return Jest.test("7", (function () {
-                      return Jest.Expect[/* toBe */1]("          foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 13, "")));
+        return Jest.test("10", (function () {
+                      return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.strFromCache("foo", 10)));
                     }));
       }));
 
-describe("space", (function () {
-        Jest.test("2", (function () {
-                return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 2, " ")));
+describe("leftPad", (function () {
+        describe("empty letter", (function () {
+                Jest.test("2", (function () {
+                        return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 2, "")));
+                      }));
+                Jest.test("3", (function () {
+                        return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 3, "")));
+                      }));
+                Jest.test("4", (function () {
+                        return Jest.Expect[/* toBe */1](" foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 4, "")));
+                      }));
+                Jest.test("5", (function () {
+                        return Jest.Expect[/* toBe */1]("  foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 5, "")));
+                      }));
+                Jest.test("6", (function () {
+                        return Jest.Expect[/* toBe */1]("         foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 12, "")));
+                      }));
+                return Jest.test("7", (function () {
+                              return Jest.Expect[/* toBe */1]("          foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 13, "")));
+                            }));
               }));
-        Jest.test("3", (function () {
-                return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 3, " ")));
+        describe("space", (function () {
+                Jest.test("2", (function () {
+                        return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 2, " ")));
+                      }));
+                Jest.test("3", (function () {
+                        return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 3, " ")));
+                      }));
+                Jest.test("4", (function () {
+                        return Jest.Expect[/* toBe */1](" foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 4, " ")));
+                      }));
+                Jest.test("5", (function () {
+                        return Jest.Expect[/* toBe */1]("  foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 5, " ")));
+                      }));
+                Jest.test("6", (function () {
+                        return Jest.Expect[/* toBe */1]("         foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 12, " ")));
+                      }));
+                return Jest.test("7", (function () {
+                              return Jest.Expect[/* toBe */1]("          foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 13, " ")));
+                            }));
               }));
-        Jest.test("4", (function () {
-                return Jest.Expect[/* toBe */1](" foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 4, " ")));
+        describe("character", (function () {
+                Jest.test("2", (function () {
+                        return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 2, ".")));
+                      }));
+                Jest.test("3", (function () {
+                        return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 3, ".")));
+                      }));
+                Jest.test("4", (function () {
+                        return Jest.Expect[/* toBe */1](".foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 4, ".")));
+                      }));
+                Jest.test("5", (function () {
+                        return Jest.Expect[/* toBe */1]("..foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 5, ".")));
+                      }));
+                Jest.test("6", (function () {
+                        return Jest.Expect[/* toBe */1](".........foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 12, ".")));
+                      }));
+                return Jest.test("7", (function () {
+                              return Jest.Expect[/* toBe */1]("..........foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 13, ".")));
+                            }));
               }));
-        Jest.test("5", (function () {
-                return Jest.Expect[/* toBe */1]("  foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 5, " ")));
-              }));
-        Jest.test("6", (function () {
-                return Jest.Expect[/* toBe */1]("         foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 12, " ")));
-              }));
-        return Jest.test("7", (function () {
-                      return Jest.Expect[/* toBe */1]("          foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 13, " ")));
-                    }));
-      }));
-
-describe("character", (function () {
-        Jest.test("2", (function () {
-                return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 2, ".")));
-              }));
-        Jest.test("3", (function () {
-                return Jest.Expect[/* toBe */1]("foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 3, ".")));
-              }));
-        Jest.test("4", (function () {
-                return Jest.Expect[/* toBe */1](".foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 4, ".")));
-              }));
-        Jest.test("5", (function () {
-                return Jest.Expect[/* toBe */1]("..foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 5, ".")));
-              }));
-        Jest.test("6", (function () {
-                return Jest.Expect[/* toBe */1](".........foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 12, ".")));
-              }));
-        return Jest.test("7", (function () {
-                      return Jest.Expect[/* toBe */1]("..........foo")(Jest.Expect[/* expect */0](Index.leftPad("foo", 13, ".")));
-                    }));
+        return /* () */0;
       }));
 
 /*  Not a pure module */

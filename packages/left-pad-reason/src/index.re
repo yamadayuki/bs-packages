@@ -11,8 +11,13 @@ let cache = [|
   "         "
 |];
 
-let leftPad (str: string) len character => {
-  let nLen = ref (len - String.length str);
+let strFromCache str len => switch len {
+  | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 => cache.(len) ^ str;
+  | _ => str
+};
+
+let leftPad str len character => {
+  let nLen = ref (max (len - String.length str) 0);
   let nChar =
     ref (
       if (0 == String.length character) {
@@ -22,7 +27,7 @@ let leftPad (str: string) len character => {
       }
     );
   switch (!nChar, !nLen < 10) {
-  | (" ", true) => cache.(!nLen) ^ str
+  | (" ", true) => strFromCache str !nLen
   | _ =>
     let pad = ref "";
     let break = ref false;
