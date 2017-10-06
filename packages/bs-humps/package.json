@@ -12,5 +12,8 @@
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "1.9.2"
+  },
+  "dependencies": {
+    "humps": "^2.0.1"
   }
 }
