@@ -4,7 +4,9 @@
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "clean": "bsb -clean-world",
+    "test": "jest",
+    "pretest": "yarn run build"
   },
   "keywords": [
     "BuckleScript"
@@ -16,5 +18,10 @@
   },
   "dependencies": {
     "humps": "^2.0.1"
+  },
+  "jest": {
+    "roots": [
+      "lib/js/src"
+    ]
   }
 }
