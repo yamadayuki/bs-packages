@@ -1,1 +1,1 @@
-Js.log "Hello, BuckleScript and Reason!";
+external camelize : string => string = "camelize" [@@bs.module "humps"];
