@@ -1,27 +1,36 @@
 {
   "name": "bs-humps",
-  "version": "0.1.0",
-  "scripts": {
-    "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world",
-    "test": "jest",
-    "pretest": "yarn run build"
-  },
-  "keywords": [
-    "BuckleScript"
-  ],
-  "license": "MIT",
-  "devDependencies": {
-    "bs-jest": "^0.2.0",
-    "bs-platform": "1.9.2"
+  "description": "humps bindings in Reason",
+  "version": "0.0.0",
+  "author": "Yuki Yamada <yamadayuuki0818@gmail.com",
+  "bugs": {
+    "url": "https://github.com/yamadayuki/bs-humps/issues"
   },
   "dependencies": {
     "humps": "^2.0.1"
   },
+  "devDependencies": {
+    "bs-jest": "^0.2.0",
+    "bs-platform": "1.9.2"
+  },
+  "homepage": "https://github.com/yamadayuki/issues#readme",
   "jest": {
     "roots": [
       "lib/js/src"
     ]
+  },
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yamadayuki/bs-humps.git"
+  },
+  "scripts": {
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "pretest": "yarn run build",
+    "start": "bsb -make-world -w",
+    "test": "jest"
   }
 }
