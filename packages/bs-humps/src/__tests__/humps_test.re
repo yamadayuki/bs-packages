@@ -36,3 +36,25 @@ describe
         (fun () => expect @@ decamelize "helloWorld1" |> toBe "hello_world1")
     }
   );
+
+describe
+  "decamelizeWithOptions"
+  (
+    fun () => {
+      test
+        "decamelizes strings with custom separator."
+        (
+          fun () =>
+            expect @@ decamelizeWithOptions "helloWorld" @@ makeOptions separator::"-" () |>
+            toBe "hello-world"
+        );
+      test
+        "uses a custom split regexp."
+        (
+          fun () =>
+            expect @@
+            decamelizeWithOptions "helloWorld1" @@ makeOptions split::[%re "/(?=[A-Z0-9])/"] () |>
+            toBe "hello_world_1"
+        )
+    }
+  );
