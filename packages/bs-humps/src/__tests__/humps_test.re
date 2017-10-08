@@ -74,3 +74,16 @@ describe
         (fun () => expect @@ pascalize "hello world" |> toBe "HelloWorld")
     }
   );
+
+describe
+  "depascalize"
+  (
+    fun () => {
+      test
+        "converts camelcased strings to underscored."
+        (fun () => expect @@ decamelize "HelloWorld" |> toBe "hello_world");
+      test
+        "does not separate on digits."
+        (fun () => expect @@ decamelize "HelloWorld1" |> toBe "hello_world1")
+    }
+  );

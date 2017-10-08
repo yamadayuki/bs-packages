@@ -9,3 +9,5 @@ external decamelize : string => string = "decamelize" [@@bs.module "humps"];
 external decamelizeWithOptions : string => options => string = "decamelize" [@@bs.module "humps"];
 
 external pascalize : string => string = "pascalize" [@@bs.module "humps"];
+
+external depascalize : string => string = "depascalize" [@@bs.module "humps"];
