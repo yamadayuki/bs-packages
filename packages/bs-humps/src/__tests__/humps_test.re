@@ -23,3 +23,16 @@ describe
       test "keeps numbers unchanged." (fun () => expect @@ camelize "-1" |> toBe "-1")
     }
   );
+
+describe
+  "decamelize"
+  (
+    fun () => {
+      test
+        "converts camelcased strings to underscored."
+        (fun () => expect @@ decamelize "helloWorld" |> toBe "hello_world");
+      test
+        "does not separate on digits."
+        (fun () => expect @@ decamelize "helloWorld1" |> toBe "hello_world1")
+    }
+  );
