@@ -7,3 +7,5 @@ external camelize : string => string = "camelize" [@@bs.module "humps"];
 external decamelize : string => string = "decamelize" [@@bs.module "humps"];
 
 external decamelizeWithOptions : string => options => string = "decamelize" [@@bs.module "humps"];
+
+external pascalize : string => string = "pascalize" [@@bs.module "humps"];

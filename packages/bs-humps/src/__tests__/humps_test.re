@@ -58,3 +58,19 @@ describe
         )
     }
   );
+
+describe
+  "pascalize"
+  (
+    fun () => {
+      test
+        "converts underscored strings to PascalCase."
+        (fun () => expect @@ pascalize "hello_world" |> toBe "HelloWorld");
+      test
+        "converts hyphenated strings to PascalCase."
+        (fun () => expect @@ pascalize "hello-world" |> toBe "HelloWorld");
+      test
+        "converts space-separated strings to PascalCase."
+        (fun () => expect @@ pascalize "hello world" |> toBe "HelloWorld")
+    }
+  );
