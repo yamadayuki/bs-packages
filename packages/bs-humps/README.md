@@ -1,18 +1,49 @@
-# Basic Reason Template
+# bs-humps
 
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+humps bindings for [BuckleScript](https://github.com/bloomberg/bucklescript) in [Reason](https://github.com/facebook/reason).
 
-# Build
+# Installation
+1. install bs-humps
+
+```sh
+$ yarn add bs-humps
+
+# or
+$ npm install --save bs-humps
 ```
-npm run build
+
+2. Add 'bs-humps' to 'bs-dependencies' section of `bsconfig.json` .
+
+# Usage
+
+Converting strings
+```ml
+Humps.camelize "hello_world"
+(* => helloWorld *)
+
+Humps.decamelize "fooBar"
+(* => foo_bar *)
+
+Humps.decamelizeWithOptions "hooBarBaz" @@ Humps.makeOptions separator::"-" ()
+(* => foo-bar-baz *)
 ```
 
-# Build + Watch
-
+# Development
+Build this project.
 ```
-npm run watch
+$ yarn build
 ```
 
+Build this project with incremental build.
+```
+$ yarn watch
+```
 
-# Editor
-If you use `vscode`, Press `Windows + Shift + B` it will build automatically
+Run test.
+```
+$ yarn test
+```
+
+# Todo
+
+- [ ] Implement external function definitions for `**Keys(object, options)` API.
