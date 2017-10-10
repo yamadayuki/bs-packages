@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "bs-jest": "^0.2.0",
-    "bs-platform": "1.9.2"
+    "bs-platform": "^1.9.2"
   },
   "homepage": "https://github.com/yamadayuki/issues#readme",
   "jest": {
