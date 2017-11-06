@@ -369,7 +369,7 @@ bs-jest@^0.2.0:
   dependencies:
     jest "^21.2.1"
 
-bs-platform@^1.8.2:
+bs-platform@^1.9.2:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-1.10.3.tgz#da5aaba2e0507f5f85a5f662818b7f8734156f84"
 
