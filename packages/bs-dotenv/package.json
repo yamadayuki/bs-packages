@@ -1,0 +1,21 @@
+{
+  "name": "bs-dotenv",
+  "description": "dotenv bindings in Reason",
+  "version": "0.0.1",
+  "author": "Yuki Yamada <yamadayuuki0818@gmail.com",
+  "jest": {
+    "roots": [
+      "lib/js/src"
+    ]
+  },
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "pretest": "yarn run build",
+    "start": "bsb -make-world -w",
+    "test": "jest"
+  }
+}
