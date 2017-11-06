@@ -1,5 +1,7 @@
 {
 	"devDependencies": {
-		"lerna": "^2.5.1"
+		"lerna": "^2.5.1",
+		"bs-jest": "^0.2.0",
+		"bs-platform": "^1.9.2"
 	}
 }

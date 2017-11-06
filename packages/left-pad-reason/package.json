@@ -13,10 +13,6 @@
     "BuckleScript"
   ],
   "license": "MIT",
-  "devDependencies": {
-    "bs-jest": "^0.2.0",
-    "bs-platform": "^1.9.2"
-  },
   "jest": {
     "roots": [
       "lib/js/src"
