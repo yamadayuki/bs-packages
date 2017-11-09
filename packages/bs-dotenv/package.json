@@ -1,6 +1,6 @@
 {
   "name": "bs-dotenv",
-  "description": "dotenv bindings in Reason",
+  "description": "dotenv implementation for Reason",
   "version": "0.0.1",
   "author": "Yuki Yamada <yamadayuuki0818@gmail.com",
   "jest": {

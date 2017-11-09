@@ -1,21 +1,21 @@
 {
   "name": "bs-leftpad",
+  "description": "leftpad implementation for Reason",
   "version": "0.1.0",
-  "main": "lib/js/src/index.js",
-  "scripts": {
-    "clean": "bsb -clean-world",
-    "build": "bsb -make-world",
-    "pretest": "yarn run build",
-    "test": "jest",
-    "watch": "bsb -make-world -w"
-  },
-  "keywords": [
-    "BuckleScript"
-  ],
-  "license": "MIT",
+  "author": "Yuki Yamada <yamadayuuki0818@gmail.com",
   "jest": {
     "roots": [
       "lib/js/src"
     ]
+  },
+  "keywords": [],
+  "license": "MIT",
+  "main": "lib/js/src/index.js",
+  "scripts": {
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "pretest": "yarn run build",
+    "start": "bsb -make-world -w",
+    "test": "jest"
   }
 }
