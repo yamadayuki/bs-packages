@@ -3,13 +3,9 @@
   "description": "humps bindings in Reason",
   "version": "0.0.1",
   "author": "Yuki Yamada <yamadayuuki0818@gmail.com",
-  "bugs": {
-    "url": "https://github.com/yamadayuki/bs-humps/issues"
-  },
   "dependencies": {
     "humps": "^2.0.1"
   },
-  "homepage": "https://github.com/yamadayuki/issues#readme",
   "jest": {
     "roots": [
       "lib/js/src"
@@ -18,10 +14,6 @@
   "keywords": [],
   "license": "MIT",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yamadayuki/bs-humps.git"
-  },
   "scripts": {
     "build": "bsb -make-world",
     "clean": "bsb -clean-world",
