@@ -4,6 +4,7 @@
   "name": "bs-humps",
   "version": "0.1.0",
   "bsc-flags": [
+    "-bs-no-version-header",
     "-bs-super-errors"
   ],
   "sources": [
