@@ -1,16 +1,22 @@
-type options = Js.t {.};
+type options = {.};
 
-external makeOptions : separator::string? => split::Js_re.t? => unit => options = "" [@@bs.obj];
+[@bs.obj]
+external makeOptions :
+  (~separator: string=?, ~split: Js_re.t=?, unit) => options =
+  "";
 
-external camelize : string => string = "camelize" [@@bs.module "humps"];
+[@bs.module "humps"] external camelize : string => string = "camelize";
 
-external decamelize : string => string = "decamelize" [@@bs.module "humps"];
+[@bs.module "humps"] external decamelize : string => string = "decamelize";
 
-external decamelizeWithOptions : string => options => string = "decamelize" [@@bs.module "humps"];
+[@bs.module "humps"]
+external decamelizeWithOptions : (string, options) => string =
+  "decamelize";
 
-external pascalize : string => string = "pascalize" [@@bs.module "humps"];
+[@bs.module "humps"] external pascalize : string => string = "pascalize";
 
-external depascalize : string => string = "depascalize" [@@bs.module "humps"];
+[@bs.module "humps"] external depascalize : string => string = "depascalize";
 
-external depascalizeWithOptions : string => options => string =
-  "depascalize" [@@bs.module "humps"];
+[@bs.module "humps"]
+external depascalizeWithOptions : (string, options) => string =
+  "depascalize";

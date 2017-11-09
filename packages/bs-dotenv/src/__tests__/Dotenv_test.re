@@ -1,8 +1,5 @@
 open Jest;
+
 open Expect;
 
-describe("sample", (
-  fun () => {
-    test("1 + 1", (fun () => expect(1 + 1) |> toBe(2)))
-  }
-))
+describe("sample", () => test("1 + 1", () => expect(1 + 1) |> toBe(2)));

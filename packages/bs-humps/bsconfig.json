@@ -20,5 +20,6 @@
   "bs-dependencies": [
     "bs-jest"
   ],
-  "namespace": true
+  "namespace": true,
+  "refmt": 3
 }

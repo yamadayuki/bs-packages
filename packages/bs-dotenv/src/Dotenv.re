@@ -5,7 +5,8 @@ let encoding = `utf8;
 let matchRegexp = [%re "/^\\s*([\\w\\.\\-]+)\\s*=\\s*(.*)?\\s*$/"];
 
 let parseLine = (line) =>
-  Js.Re.exec(line, matchRegexp) |> (
+  Js.Re.exec(line, matchRegexp)
+  |> (
     fun
     | Some(result) => {
         let captured = Js.Re.captures(result);
