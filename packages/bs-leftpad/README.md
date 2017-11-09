@@ -1,4 +1,4 @@
-# left-pad-reason
+# bs-leftpad
 
 Reasonml implementation for `left-pad` package.
 

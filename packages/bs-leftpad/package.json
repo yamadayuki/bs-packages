@@ -1,5 +1,5 @@
 {
-  "name": "left-pad-reason",
+  "name": "bs-leftpad",
   "version": "0.1.0",
   "main": "lib/js/src/index.js",
   "scripts": {
