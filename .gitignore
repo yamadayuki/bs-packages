@@ -3,7 +3,8 @@
 npm-debug.log
 lerna-debug.log
 lib/
-/node_modules/
+node_modules/
+.bsb.lock
 
 *.exe
 *.obj
