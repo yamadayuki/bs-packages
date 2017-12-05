@@ -1,6 +1,6 @@
 {
   "name": "bs-dotenv",
-  "description": "dotenv implementation for Reason",
+  "description": "dotenv bindings in Reason",
   "version": "0.0.1",
   "author": "Yuki Yamada <yamadayuuki0818@gmail.com",
   "jest": {
@@ -17,5 +17,8 @@
     "pretest": "yarn run build",
     "start": "bsb -make-world -w",
     "test": "jest"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0"
   }
 }
