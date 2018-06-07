@@ -1,0 +1,35 @@
+{
+  "name": "@yamadayuki/bs-graphql",
+  "description": "graphql-js binding for ReasonML and BuckleScript",
+  "version": "0.0.0",
+  "author": "yamadayuki",
+  "bugs": "https://github.com/yamadayuki/bs-graphql/issues",
+  "dependencies": {
+    "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "^0.4.2",
+    "bs-platform": "^3.1.5"
+  },
+  "homepage": "https://github.com/yamadayuki/bs-graphql",
+  "keywords": [
+    "bucklescript",
+    "graphql",
+    "reason"
+  ],
+  "license": "MIT",
+  "main": "lib/js/src/GraphQL.bs.js",
+  "repository": {
+    "url": "https://github.com/yamadayuki/bs-graphql"
+  },
+  "scripts": {
+    "build": "bsb -make-world",
+    "clean": "bsb -clean-world",
+    "release": "npm run release-patch",
+    "release-major": "npm version major && git push origin master --tags && npm publish --access=public",
+    "release-minor": "npm version minor && git push origin master --tags && npm publish --access=public",
+    "release-patch": "npm version patch && git push origin master --tags && npm publish --access=public",
+    "start": "bsb -make-world -w",
+    "test": "jest"
+  }
+}
