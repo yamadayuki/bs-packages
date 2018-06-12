@@ -10,13 +10,11 @@ external makeOptions :
 [@bs.module "humps"] external decamelize : string => string = "decamelize";
 
 [@bs.module "humps"]
-external decamelizeWithOptions : (string, options) => string =
-  "decamelize";
+external decamelizeWithOptions : (string, options) => string = "decamelize";
 
 [@bs.module "humps"] external pascalize : string => string = "pascalize";
 
 [@bs.module "humps"] external depascalize : string => string = "depascalize";
 
 [@bs.module "humps"]
-external depascalizeWithOptions : (string, options) => string =
-  "depascalize";
+external depascalizeWithOptions : (string, options) => string = "depascalize";

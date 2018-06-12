@@ -8,11 +8,11 @@ let cache = [|
   "      ",
   "       ",
   "        ",
-  "         "
+  "         ",
 |];
 
 let strFromCache = (str, len) =>
-  switch len {
+  switch (len) {
   | 0
   | 1
   | 2
@@ -31,10 +31,10 @@ let leftPad = (str, len, character) => {
   let nChar =
     ref(
       if (0 == String.length(character)) {
-        " "
+        " ";
       } else {
-        character
-      }
+        character;
+      },
     );
   switch (nChar^, nLen^ < 10) {
   | (" ", true) => strFromCache(str, nLen^)
@@ -45,17 +45,17 @@ let leftPad = (str, len, character) => {
       switch (nLen^ land 1, nLen^) {
       | (1, 0) =>
         pad := pad^ ++ nChar^;
-        break := true
+        break := true;
       | (1, _) =>
         pad := pad^ ++ nChar^;
         nLen := nLen^ lsr 1;
-        nChar := nChar^ ++ nChar^
+        nChar := nChar^ ++ nChar^;
       | (_, 0) => break := true
       | (_, _) =>
         nLen := nLen^ lsr 1;
-        nChar := nChar^ ++ nChar^
-      }
+        nChar := nChar^ ++ nChar^;
+      };
     };
-    pad^ ++ str
-  }
+    pad^ ++ str;
+  };
 };

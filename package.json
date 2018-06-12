@@ -1,7 +1,11 @@
 {
-	"devDependencies": {
-		"bs-jest": "^0.2.0",
-		"bs-platform": "^2.0.0",
-		"lerna": "^2.5.1"
-	}
+  "scripts": {
+    "build": "lerna run build",
+    "test": "lerna run test"
+  },
+  "devDependencies": {
+    "bs-jest": "^0.2.0",
+    "bs-platform": "^2.0.0",
+    "lerna": "^2.5.1"
+  }
 }
