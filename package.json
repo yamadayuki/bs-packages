@@ -4,8 +4,8 @@
     "test": "lerna run test"
   },
   "devDependencies": {
-    "bs-jest": "^0.2.0",
-    "bs-platform": "^2.0.0",
+    "@glennsl/bs-jest": "^0.4.0",
+    "bs-platform": "^3.0.0",
     "lerna": "^2.5.1"
   }
 }
