@@ -30,6 +30,7 @@
     "release-minor": "npm version minor && git push origin master --tags && npm publish --access=public",
     "release-patch": "npm version patch && git push origin master --tags && npm publish --access=public",
     "start": "bsb -make-world -w",
+    "pretest": "yarn run build",
     "test": "jest"
   }
 }
